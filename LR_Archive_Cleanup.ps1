@@ -1,5 +1,11 @@
 #LogRhythm Archive Clenaup
 
+trap [Exception] 
+{
+	write-error $("Exception: " + $_)
+	exit 1
+}
+
 #Archive Path
 $Path = "D:\LogRhythmArchives\Inactive"
 
